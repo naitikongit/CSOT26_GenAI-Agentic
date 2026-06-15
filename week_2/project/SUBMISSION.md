@@ -1,0 +1,9 @@
+Week 2 Submission: Research Agent & TUI
+**What I built:**
+For this project, I built a terminal-based research agent that works like a personal assistant. Basically, I set up a loop where the AI can figure out a user's question, decide which tools to use, and then actually run them to get an answer. I used the OpenAI SDK for the function calling and connected three main tools: Google Search via Serper, a web-fetching tool to scrape and summarize text using trafilatura, and an AlphaXiv MCP tool to find academic papers. I wrapped everything in a full-screen Terminal User Interface (TUI) with the Textual library, which makes the whole thing feel much more interactive—you get real-time logs and a clean display to track what the agent is doing.
+
+**Design Decisions:**
+One thing I had to figure out was how to handle website content. I decided to truncate the output from the web-fetching tool to 2,000 characters. Since I'm using a free-tier AI model, I noticed that dumping massive amounts of raw HTML or messy text from a website often caused the model to hit token limits or just get completely overwhelmed. By cutting the text down, I kept the model focused on the actual info while making sure the conversation didn't glitch out or throw errors.
+
+**Surprise and Learning:**
+The coolest part of this build was definitely watching the agent handle anti-bot protections—it really acted like a human researcher. When I asked about the weather in Delhi, it tried weather.com first, but the tool failed because the site blocks automated access. Instead of just giving up or crashing, the agent actually "understood" the error, pivoted to a new search query, and found the data on the Indian Meteorological Department website instead. Seeing it think on its feet and try a different path when the first attempt failed was a totally cool moment; it felt way more like a real assistant than just another chatbot.
