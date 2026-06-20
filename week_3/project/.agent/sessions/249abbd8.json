@@ -1,0 +1,43 @@
+{
+  "id": "249abbd8",
+  "title": "New Research Session",
+  "updated_at": "2026-06-20T22:44:48.017850",
+  "history": [
+    {
+      "role": "system",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "hi what is your name?"
+    },
+    {
+      "content": "I don't have a personal name, but you can call me Assistant! How can I help you today?",
+      "role": "assistant"
+    },
+    {
+      "role": "user",
+      "content": "can i call you detu"
+    },
+    {
+      "content": "Of course! You can call me Detu. How can I assist you today, feel free to ask anything!",
+      "role": "assistant"
+    },
+    {
+      "role": "user",
+      "content": "so call me naitik"
+    },
+    {
+      "content": "Got it, Naitik! What would you like to talk about today?",
+      "role": "assistant"
+    },
+    {
+      "role": "user",
+      "content": "what is your nae"
+    },
+    {
+      "content": "You can call me Detu! How can I assist you today, Naitik?",
+      "role": "assistant"
+    }
+  ]
+}

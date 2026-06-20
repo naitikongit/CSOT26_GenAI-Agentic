@@ -1,0 +1,179 @@
+{
+  "id": "ba913c9b",
+  "title": "New Research Session",
+  "updated_at": "2026-06-20T22:40:16.931213",
+  "history": [
+    {
+      "role": "system",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Summarise the FlashAttention paper"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_kLXldv84SrBCM3K4Rpr8VjF0",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention\",\"limit\":1}",
+            "name": "paper_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_kLXldv84SrBCM3K4Rpr8VjF0",
+      "name": "paper_search",
+      "content": "Title: JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising\nID: 2606.20563\nSummary: Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/\n---"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_s98CQfBBW5iFiaAbWK0LCoLn",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention paper summary\"}",
+            "name": "web_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_s98CQfBBW5iFiaAbWK0LCoLn",
+      "name": "web_search",
+      "content": "SERPER_API_KEY is missing from .env"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_JSM5O8yl1gSQXDcCTAZDZVt0",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention\",\"limit\":5}",
+            "name": "paper_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_JSM5O8yl1gSQXDcCTAZDZVt0",
+      "name": "paper_search",
+      "content": "Title: JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising\nID: 2606.20563\nSummary: Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/\n---\nTitle: UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning\nID: 2606.20559\nSummary: Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework that produces UNIEGO, a unified egocentric encoder trained with nine teachers spanning ego-exo viewpoints, RGB, depth, and skeleton modalities, and four foundation models. Rather than distilling directly from heterogeneous teachers whose incompatible architectures and feature geometries induce conflicting gradients, our framework interposes a layer of representation-specific Proxy models that translate diverse teacher knowledge into a homogeneous egocentric space. A second distillation stage, Selective Proxy Distillation (SPD), then adaptively selects, for each training sample, the subset of proxies that are both correct and confident, distilling exclusively from reliable supervision and suppressing erroneous signals. SPD is further stabilized by initializing UNIEGO as a learned convex combination of proxy parameters, placing the unified model in a well-conditioned region of the loss landscape before distillation begins. UNIEGO achieves state-of-the-art performance across three egocentric video understanding tasks - action recognition, video retrieval, and action segmentation on three challenging ego-exo benchmarks, outperforming naive multi-teacher distillation baselines and demonstrating that structured, proxy-mediated knowledge transfer yields richer and more discriminative egocentric representations.\n---\nTitle: Current World Models Lack a Persistent State Core\nID: 2606.20545\nSummary: World models are increasingly regarded as a decisive step toward artificial general intelligence, yet modeling the physical world demands more than rendering convincing frames on demand: it requires an internal world state that keeps evolving over time, decoupled from observation, so that objects endure and events run to their conclusions whether or not a camera is watching, much as the moon holds to its orbit when no one is looking. This requirement is a blind spot of existing benchmarks, which reward surface properties such as fidelity, motion, and camera controllability while never asking whether a generated world keeps evolving once it is unobserved. We introduce WRBench, the first systematic diagnostic benchmark that treats camera motion as an intervention on observability and resolves evaluation into a human-calibrated chain that asks whether the camera executes the requested interaction, whether the scene stays continuous and identifiable while in view, and whether a returning target remains consistent with the event that was set in motion. Across 9{,}600 videos from 23 models spanning four control paradigms, one finding proves stubborn: current systems maintain the observed world as a tracking shot, resuming a returning target in the state at which it was abandoned rather than advancing the event while it went unseen. Because this failure recurs across control paradigms, model families, and increments of scale, robust world-state evolution does not follow from cleaner imagery, tighter control, richer geometric priors, or sheer parameter count We therefore argue that the stability of the physical state kernel and the consistency of worldlines under viewpoint intervention should become first-class objectives of world-model design, so that a world model captures how the world will unfold rather than how the next frame appears.\n---\nTitle: The FID Lottery: Quantifying Hidden Randomness in Generative-Model Evaluation\nID: 2606.20536\nSummary: The Frechet Inception Distance (FID) is the de facto arbiter of image generation, yet most papers report just a single number from a single trained model using a single sampling seed. How reproducible is that number if we retrain the model, or merely resample from it? In this paper, we treat FID as a random variable on a two-axis panel of training and generation seeds, and measure its variance directly on several hundred SiT networks trained on class-conditional ImageNet 256x256. We report surprising findings: (a) Retraining the model using the same recipe with a different seed moves FID 3.2x more (in Inception feature space) than redrawing samples from a fixed network. (b) That gap is driven by three factors: random initialisation, data ordering, and the per-step Gaussian noise of the flow-matching loss. (c) Increasing compute or model size barely tightens the spread, holding the FID coefficient of variation (CoV) inside a 1-2% band. (d) Per-cell classifier-free-guidance tuning halves the spread but reshuffles which seeds work best, and a lucky training seed reaches the same FID with up to 2x less compute than an unlucky one. Based on these findings, we recommend a new FID evaluation protocol: evaluate under per-cell optimal guidance, treat any FID gap below the empirically measured ~1.3% CoV as inconclusive, and report an error bar over several training seeds rather than a single FID number.\n---\nTitle: LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents\nID: 2606.20529\nSummary: Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifiers, constraints, and conditions observed through user interaction and tool calls. In standard agents, task states are not represented separately. Observations, tool returns, and policy instructions are placed in the prompt, leaving agents to reconstruct the relevant states from the prompt each time they decide what to do next. This design makes state management implicit, creating two common failure modes. An agent may retrieve the right facts but later ground its decision in stale, missing, or incorrect information; and a syntactically valid tool call may still violate a domain policy that depends on the current task state. We introduce LedgerAgent, an inference-time method for tool-calling agents that maintains observed task states in a separate ledger and renders the states into the prompt. The ledger is also used to check state-dependent policy constraints before environment-changing tool calls are executed, blocking policy violations. Across four customer-service domains and a mixed panel of open- and closed-weight models, LedgerAgent improves average passk over a standard prompt-based tool-calling approach, with the largest gains under stricter multi-trial consistency metrics.\n---"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_gP50sRkeThYLZoGOegZw9cNs",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention paper site:arxiv.org\"}",
+            "name": "web_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_gP50sRkeThYLZoGOegZw9cNs",
+      "name": "web_search",
+      "content": "SERPER_API_KEY is missing from .env"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_qBg06EaUocH8IVJCf0owWYPy",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention arxiv.org summary\"}",
+            "name": "web_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_qBg06EaUocH8IVJCf0owWYPy",
+      "name": "web_search",
+      "content": "SERPER_API_KEY is missing from .env"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_NsenL4xYEspFDfagmtT5or3w",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention\",\"limit\":5}",
+            "name": "paper_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_NsenL4xYEspFDfagmtT5or3w",
+      "name": "paper_search",
+      "content": "Title: JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising\nID: 2606.20563\nSummary: Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/\n---\nTitle: UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning\nID: 2606.20559\nSummary: Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework that produces UNIEGO, a unified egocentric encoder trained with nine teachers spanning ego-exo viewpoints, RGB, depth, and skeleton modalities, and four foundation models. Rather than distilling directly from heterogeneous teachers whose incompatible architectures and feature geometries induce conflicting gradients, our framework interposes a layer of representation-specific Proxy models that translate diverse teacher knowledge into a homogeneous egocentric space. A second distillation stage, Selective Proxy Distillation (SPD), then adaptively selects, for each training sample, the subset of proxies that are both correct and confident, distilling exclusively from reliable supervision and suppressing erroneous signals. SPD is further stabilized by initializing UNIEGO as a learned convex combination of proxy parameters, placing the unified model in a well-conditioned region of the loss landscape before distillation begins. UNIEGO achieves state-of-the-art performance across three egocentric video understanding tasks - action recognition, video retrieval, and action segmentation on three challenging ego-exo benchmarks, outperforming naive multi-teacher distillation baselines and demonstrating that structured, proxy-mediated knowledge transfer yields richer and more discriminative egocentric representations.\n---\nTitle: Current World Models Lack a Persistent State Core\nID: 2606.20545\nSummary: World models are increasingly regarded as a decisive step toward artificial general intelligence, yet modeling the physical world demands more than rendering convincing frames on demand: it requires an internal world state that keeps evolving over time, decoupled from observation, so that objects endure and events run to their conclusions whether or not a camera is watching, much as the moon holds to its orbit when no one is looking. This requirement is a blind spot of existing benchmarks, which reward surface properties such as fidelity, motion, and camera controllability while never asking whether a generated world keeps evolving once it is unobserved. We introduce WRBench, the first systematic diagnostic benchmark that treats camera motion as an intervention on observability and resolves evaluation into a human-calibrated chain that asks whether the camera executes the requested interaction, whether the scene stays continuous and identifiable while in view, and whether a returning target remains consistent with the event that was set in motion. Across 9{,}600 videos from 23 models spanning four control paradigms, one finding proves stubborn: current systems maintain the observed world as a tracking shot, resuming a returning target in the state at which it was abandoned rather than advancing the event while it went unseen. Because this failure recurs across control paradigms, model families, and increments of scale, robust world-state evolution does not follow from cleaner imagery, tighter control, richer geometric priors, or sheer parameter count We therefore argue that the stability of the physical state kernel and the consistency of worldlines under viewpoint intervention should become first-class objectives of world-model design, so that a world model captures how the world will unfold rather than how the next frame appears.\n---\nTitle: The FID Lottery: Quantifying Hidden Randomness in Generative-Model Evaluation\nID: 2606.20536\nSummary: The Frechet Inception Distance (FID) is the de facto arbiter of image generation, yet most papers report just a single number from a single trained model using a single sampling seed. How reproducible is that number if we retrain the model, or merely resample from it? In this paper, we treat FID as a random variable on a two-axis panel of training and generation seeds, and measure its variance directly on several hundred SiT networks trained on class-conditional ImageNet 256x256. We report surprising findings: (a) Retraining the model using the same recipe with a different seed moves FID 3.2x more (in Inception feature space) than redrawing samples from a fixed network. (b) That gap is driven by three factors: random initialisation, data ordering, and the per-step Gaussian noise of the flow-matching loss. (c) Increasing compute or model size barely tightens the spread, holding the FID coefficient of variation (CoV) inside a 1-2% band. (d) Per-cell classifier-free-guidance tuning halves the spread but reshuffles which seeds work best, and a lucky training seed reaches the same FID with up to 2x less compute than an unlucky one. Based on these findings, we recommend a new FID evaluation protocol: evaluate under per-cell optimal guidance, treat any FID gap below the empirically measured ~1.3% CoV as inconclusive, and report an error bar over several training seeds rather than a single FID number.\n---\nTitle: LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents\nID: 2606.20529\nSummary: Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifiers, constraints, and conditions observed through user interaction and tool calls. In standard agents, task states are not represented separately. Observations, tool returns, and policy instructions are placed in the prompt, leaving agents to reconstruct the relevant states from the prompt each time they decide what to do next. This design makes state management implicit, creating two common failure modes. An agent may retrieve the right facts but later ground its decision in stale, missing, or incorrect information; and a syntactically valid tool call may still violate a domain policy that depends on the current task state. We introduce LedgerAgent, an inference-time method for tool-calling agents that maintains observed task states in a separate ledger and renders the states into the prompt. The ledger is also used to check state-dependent policy constraints before environment-changing tool calls are executed, blocking policy violations. Across four customer-service domains and a mixed panel of open- and closed-weight models, LedgerAgent improves average passk over a standard prompt-based tool-calling approach, with the largest gains under stricter multi-trial consistency metrics.\n---"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_Gy4LqQkBtKwdn67nDbhvpHJM",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention architecture paper summary\"}",
+            "name": "web_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_Gy4LqQkBtKwdn67nDbhvpHJM",
+      "name": "web_search",
+      "content": "SERPER_API_KEY is missing from .env"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_pMAPAklzYdzeHgxdvkkpsp7M",
+          "function": {
+            "arguments": "{\"query\":\"FlashAttention paper details\"}",
+            "name": "web_search"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_pMAPAklzYdzeHgxdvkkpsp7M",
+      "name": "web_search",
+      "content": "SERPER_API_KEY is missing from .env"
+    },
+    {
+      "content": "It seems I am unable to locate the specific \"FlashAttention\" paper or its summary directly from my methods. However, I can provide you with a general overview based on existing knowledge about \"FlashAttention\".\n\nFlashAttention is a technique aimed at optimizing the computation of attention mechanisms in neural networks, particularly in transformer models. The key focus of FlashAttention is to enhance performance while significantly reducing the memory footprint compared to traditional attention mechanisms. This is particularly important for large-scale language models where computational efficiency is critical.\n\n**Key Points:**\n1. **Efficiency**: FlashAttention utilizes an efficient memory access pattern that minimizes memory usage during training and inference. This allows larger datasets to be processed more quickly and with less hardware requirements.\n   \n2. **Speed**: By leveraging hardware accelerators effectively, FlashAttention accelerates attention calculations, which are typically the bottleneck in transformer networks.\n\n3. **Training Stability**: It also contributes to training stability by enabling gradient accumulation over larger batch sizes, which is beneficial for achieving better model convergence.\n\n4. **Applications**: FlashAttention can be particularly useful in applications requiring real-time processing or those with limited computational resources, such as mobile or edge devices.\n\nIf you need a more detailed or specific analysis of the FlashAttention paper, please provide the correct title or context, and I will do my best to assist!",
+      "role": "assistant"
+    }
+  ]
+}
